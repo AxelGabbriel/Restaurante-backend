@@ -10,7 +10,7 @@ const { LocalStrategy } = require('./strategies')
 
 //middlewares
 
-app.use(cors())
+
 
 /*const storage = multer.diskStorage({
   destination: path.join(__dirname, 'public/uploads'),

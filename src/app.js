@@ -7,29 +7,16 @@ const { LocalStrategy } = require('./strategies')
 
 
 
-
 //middlewares
 
-
-
-/*const storage = multer.diskStorage({
-  destination: path.join(__dirname, 'public/uploads'),
-  filename: (req, file, cb) => {
-    cb(null, new Date().getTime() + path.extname(file.originalname))
-  }
-});
-app.use(multer({storage}).single('image'))*/
-//a
 app.use(session({
     secret:'xd',
     resave: false,
     saveUninitialized: false
 }))
 
-/*app.use(express.json());*/
+app.use(express.json());
 app.use(express.urlencoded({extended: true}));
-
-
 
 passport.use(LocalStrategy);
 
@@ -50,7 +37,7 @@ app.use(require('./routes/router'));
 
 
 //servidor activo
-const port = 8000;
+const port =process.env.PORT || 8000;
 app.listen(port, ()=>{
     console.log('servidor activo en puerto 8000')
 })

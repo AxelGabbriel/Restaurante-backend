@@ -16,7 +16,4 @@ usuario.register= (req,res)=>{
       
    }
 
-
-
-
    module.exports= usuario

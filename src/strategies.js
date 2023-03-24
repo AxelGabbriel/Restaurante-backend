@@ -5,7 +5,7 @@ const helpers =require('./helpers')
 
 const config={
   
-  user: 'postgre',
+  user: 'postgres',
   host: 'localhost',
   database: 'restaurante',
   password: 'axel',

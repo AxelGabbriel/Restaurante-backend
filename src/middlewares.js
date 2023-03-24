@@ -8,7 +8,7 @@ const passportAuth = (req, res, next) => {
     }
     if (!user) {
       return res.json(
-        '0'
+        'acceso denegado'
       );
     }
     req.logIn(user, function (err) {
@@ -20,7 +20,7 @@ const passportAuth = (req, res, next) => {
         });
       }
       res.json(
-        '1'
+        'Bienvenido'
         
       );
     });
